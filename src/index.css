@@ -11,3 +11,185 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --main-color: #1ABC9C;
+  --secondary-color: #2C3E50;
+}
+
+.m-text {
+  color: var(--main-color);
+}
+
+.m-bg {
+  background-color: var(--main-color);
+}
+
+.s-text {
+  color: var(--secondary-color);
+}
+
+.s-bg {
+  background-color: var(--secondary-color);
+}
+
+nav {
+  background-color: var(--secondary-color);
+  transition: 0.6s;
+  padding: 1.5rem 0 !important;
+}
+
+.sticky {
+  padding: 12px 0 !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 10px 7px;
+    margin: 5px 0;
+  }
+}
+
+.active {
+  background-color: var(--main-color);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.home {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-top: 86px;
+  min-height: calc(100vh - 106px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home img {
+  width: 250px;
+}
+
+.line {
+  height: 4px;
+  width: 80px;
+}
+
+
+.about {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-top: 86px;
+  min-height: calc(100vh - 106px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ======================>  Portfolio  <====================== */
+.portfolio {
+  margin-top: 120px;
+  padding: 30px 0;
+}
+
+.item {
+  cursor: pointer;
+  position: relative;
+}
+
+.item:hover .layer {
+  opacity: 1;
+}
+
+.layer {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  transition: 0.6s;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ======================>  Contact  <====================== */
+.contact {
+  margin-top: 120px;
+  padding: 30px 0;
+}
+
+.outline-0 {
+  outline: none;
+}
+
+.lbl-name,
+.lbl-age,
+.lbl-email,
+.lbl-password {
+  position: relative;
+  transition: 0.6s;
+}
+
+.show {
+  top: 0;
+  z-index: 1;
+}
+
+.hide {
+  top: 50px;
+  z-index: -1;
+}
+
+.btn-main {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #17b192;
+  --bs-btn-hover-border-color: #139d82;
+}
+
+
+/* ======================>  Footer  <====================== */
+.footer-body {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}
+
+.footer-body .part {
+  padding: 40px 0 20px;
+}
+
+.icon {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.icon:hover {
+  color: var(--secondary-color);
+  background-color: #fff;
+}
+
+.footer-end {
+  background-color: #1a252f;
+  padding: 10px;
+}
+
+.footer-end p {
+  color: #f0f8ff;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
