@@ -37,26 +37,26 @@ export default function Contact() {
     //   (userPassword.value === '') ? hideLabel() : showLabel();
     // });
 
-    inputAffected(userName, lblName);
-    inputAffected(userAge, lblAge);
-    inputAffected(userEmail, lblEmail);
-    inputAffected(userPassword, lblPassword);
+    affectedInput(userName, lblName);
+    affectedInput(userAge, lblAge);
+    affectedInput(userEmail, lblEmail);
+    affectedInput(userPassword, lblPassword);
 
   }, [])
 
-  function inputAffected(type, label) {
-    type.addEventListener("input", function () {
-      (type.value.length > 0) ? showLabel(label) : hideLabel(label);
+  function affectedInput(affected, label) {
+    affected.addEventListener("input", function () {
+      (affected.value.length > 0) ? showLabel(label) : hideLabel(label);
     })
   }
 
 
   function showLabel(label) {
-    label.classList.replace("hide", "show")
+    label.classList.replace("hide-lbl", "show-lbl")
   }
 
   function hideLabel(label) {
-    label.classList.replace("show", "hide")
+    label.classList.replace("show-lbl", "hide-lbl")
   }
 
   function clearInputs() {
@@ -83,16 +83,16 @@ export default function Contact() {
           </div>
           <div className="contact-body mb-5">
             <form action="" className='w-50 p-3 mx-auto d-flex flex-wrap gap-2'>
-              <label htmlFor="name" className='m-text lbl-name hide'>Name:</label>
+              <label htmlFor="name" className='m-text lbl-name hide-lbl'>Name:</label>
               <input id='name' type="text" placeholder='Name' className='outline-0 border-0 border-bottom w-100 p-3 rounded' />
 
-              <label htmlFor="age" className='m-text lbl-age hide'>Age:</label>
+              <label htmlFor="age" className='m-text lbl-age hide-lbl'>Age:</label>
               <input id='age' type="number" placeholder='Age' className='outline-0 border-0 border-bottom w-100 p-3 rounded' />
 
-              <label htmlFor="email" className='m-text lbl-email hide'>Email:</label>
+              <label htmlFor="email" className='m-text lbl-email hide-lbl'>Email:</label>
               <input id='email' type="email" placeholder='Email' className='outline-0 border-0 border-bottom w-100 p-3 rounded' />
 
-              <label htmlFor="password" className='m-text lbl-password hide'>Password:</label>
+              <label htmlFor="password" className='m-text lbl-password hide-lbl'>Password:</label>
               <input id='password' type="password" placeholder='Password' className='outline-0 border-0 border-bottom w-100 p-3 rounded' />
 
               <button onClick={clearInputs} type='button' className='btn btn-main align-self-start mt-2'>SEND MESSAGE</button>

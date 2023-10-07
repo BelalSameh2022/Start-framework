@@ -33,6 +33,8 @@ code {
   background-color: var(--secondary-color);
 }
 
+
+/* ======================>  Navbar  <====================== */
 nav {
   background-color: var(--secondary-color);
   transition: 0.6s;
@@ -60,6 +62,8 @@ nav {
   width: fit-content;
 }
 
+
+/* ======================>  Home  <====================== */
 .home {
   background-color: var(--main-color);
   color: #fff;
@@ -80,6 +84,7 @@ nav {
 }
 
 
+/* ======================>  About  <====================== */
 .about {
   background-color: var(--main-color);
   color: #fff;
@@ -136,12 +141,12 @@ nav {
   transition: 0.6s;
 }
 
-.show {
+.show-lbl {
   top: 0;
   z-index: 1;
 }
 
-.hide {
+.hide-lbl {
   top: 50px;
   z-index: -1;
 }
